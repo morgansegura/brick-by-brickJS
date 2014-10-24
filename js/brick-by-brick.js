@@ -11,6 +11,7 @@ Licensed Under MIT
 			gridLayout,
 			gridLayoutItems,
 			temp = null,
+			duration = 1000,
 			s = null;
 
     /*
@@ -179,7 +180,8 @@ Licensed Under MIT
 
         removeItems : function(array, removeFade) {
 			var columns;
-
+			if(typeof removeFade === "undefined") { removeFade = duration; }
+			
 			$.each(array, function(j, selector) {
 				for(var i=0; i < clonedItemsOriginal.length; i++) {
 					if($(clonedItemsOriginal[i]).is(selector)) {
@@ -202,7 +204,8 @@ Licensed Under MIT
 
         hideItems : function(array, hideFade) {
 				var columns;
-
+				if(typeof hideFade === "undefined") { hideFade = duration; }
+				
 				$.each(array, function(j, selector) {
 					for(var i=0; i < temp.length; i++) {
 						$(selector).animate({'opacity': 0}, hideFade);
@@ -222,6 +225,8 @@ Licensed Under MIT
 		},
 
         showItems : function(array, showFade) {
+			if(typeof showFade === "undefined") { showFade = duration; }
+		
 				var cio = clonedItemsOriginal, columns;
 				$.each(array, function(j, selector) {
 					for(var i=0; i < cio.length; i++) {

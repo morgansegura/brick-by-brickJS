@@ -83,7 +83,6 @@
 	<p id="delete2"><a href="#" style="color:silver;">Delete2</a></p>
     <p id="end"><a href="#" style="color:black;">End</a></p>
 	<p id="reload"><a href="#" style="color:black;">Reload</a></p>
-	<!--<p id="exit"><a href="#" style="color:black;">Exit</a></p>-->
 
 	<div class="existing" id="existing1" data-role="footer">Existing item 1</div>
 	<div class="existing" id="existing2" data-role="footer">Existing item 2</div>
@@ -91,11 +90,10 @@
 </div>
 
 
-
 <script>
 $(document).ready(function(){
 
-    var elementArray = [".delete1", "#two", "[data-something='something']"],  //#two, #three, #six, #eight
+    var elementArray = [".delete1", "#two", "[data-something='something']"],  //#two, #three, #five, #eight
 			elementArray2 = ["#existing1", "#existing2"],
 			elementArray3 = [".hide1"],  		//#one, #four, #six
 			elementArray4 = [".hide2"],  		//#three, #seven
@@ -117,27 +115,27 @@ $(document).ready(function(){
     });
 
     $('#hide1').on('click',function(){
-       $('#layout').layout('hideItems', elementArray3, 1000);
+       $('#layout').layout('hideItems', elementArray3, 2000);
     });
 
 	$("#hide2").on('click', function() {
-		$('#layout').layout('hideItems', elementArray4, 1000);
+		$('#layout').layout('hideItems', elementArray4, 3000);
 	});
 
 	$("#show1").on('click', function() {
-		$('#layout').layout('showItems', elementArray3, 1000);
+		$('#layout').layout('showItems', elementArray3);
 	});
 
 	$("#show2").on('click', function() {
-		$('#layout').layout('showItems', elementArray4, 1000);
+		$('#layout').layout('showItems', elementArray4);
 	});
 
 	$("#delete1").on('click', function() {
-		$('#layout').layout('removeItems', elementArray5, 1000);
+		$('#layout').layout('removeItems', elementArray5, 2000);
 	});
 
 	$("#delete2").on('click', function() {
-		$('#layout').layout('removeItems', elementArray6, 1000);
+		$('#layout').layout('removeItems', elementArray6, 2000);
 	});
 
     $("#end").on('click',function(){
@@ -147,12 +145,6 @@ $(document).ready(function(){
 	 $("#reload").on('click',function(){
        $('#layout').layout('reload')
     });
-
-	/*$("#exit").on('click', function(){
-       $('#layout').layout('exitItems', elementArray3, function(content) {
-			$('#test-cont').append(content);
-		});
-    });*/
 
 	$('#layout').layout('addAfter', elementArray2);
 

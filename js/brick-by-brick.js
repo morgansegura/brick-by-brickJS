@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2015 S. William & A.M. Pritchard
+Copyright © 2015 S. William & A.M. Pritchard
 Licensed Under MIT
 */
 

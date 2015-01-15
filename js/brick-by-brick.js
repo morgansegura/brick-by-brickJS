@@ -115,7 +115,6 @@ Licensed Under MIT
             $(this).children('div, section, article, img, a').addClass('b-by-b-item');
             gridLayout = $(this);
             gridLayoutItems = gridLayout.children('.b-by-b-item');
-
             gridLayout.css('width', '100%');
 
              clonedItems = gridLayoutItems.clone();
@@ -128,6 +127,7 @@ Licensed Under MIT
                             resizedColumns = resizeColumns();
                             createColumns(resizedColumns);
                         }
+                    gridLayout.css('width', '100%');
                     });
 
                     $(window).resize();

@@ -43,7 +43,7 @@ This CSS will create a three column layout which will scale down to two and then
         }
     }
    
-    media (min-width: 481px) and (max-width: 1024px) {
+    @media (min-width: 481px) and (max-width: 1024px) {
         #layout .b-by-b-item {
           width: 50%;
         }
